@@ -10,9 +10,8 @@ import PageNotFound from './pages/PageNotFound';
 import Overview from './pages/Overview';
 import Stats from './pages/Stats';
 import Users from './pages/Users';
-import UserDetails from './pages/UserDetails';
 import Sidebar from './components/Sidebar'; 
-import Login from './pages/Login'; 
+import Login from './pages/Login';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -24,15 +23,15 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* Sidebar will only be shown when the user is logged in */}
-        {isLoggedIn && <Sidebar handleAuth={handleAuth} />}
+        {/* Sidebar will always be shown */}
+        <Sidebar handleAuth={handleAuth} isLoggedIn={isLoggedIn} />
 
         <main className={isLoggedIn ? 'main-content' : ''}>
           <Routes>
-            {/* Redirect to login if not logged in and accessing root */}
+            {/* Show Home page when first accessing */}
             <Route 
               path="/" 
-              element={isLoggedIn ? <Home /> : <Navigate to="/login" />} 
+              element={<Home />} 
             />
 
             {/* Login Route */}
