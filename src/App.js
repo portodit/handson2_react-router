@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -12,6 +12,8 @@ import Stats from './pages/Stats';
 import Users from './pages/Users';
 import Sidebar from './components/Sidebar'; 
 import Login from './pages/Login';
+import UserDetails from './pages/UserDetails';
+import UserProfile from './pages/Users';  
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -23,51 +25,83 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* Sidebar will always be shown */}
         <Sidebar handleAuth={handleAuth} isLoggedIn={isLoggedIn} />
 
-        <main className={isLoggedIn ? 'main-content' : ''}>
-          <Routes>
-            {/* Show Home page when first accessing */}
-            <Route 
-              path="/" 
-              element={<Home />} 
-            />
+        <div className="content-wrapper">
+          <main className="main-content">
+            <Routes>
+              {/* Home page */}
+              <Route path="/" element={<Home />} />
 
-            {/* Login Route */}
-            <Route path="/login" element={<Login handleAuth={handleAuth} />} />
+              {/* Login Route */}
+              <Route path="/login" element={<Login handleAuth={handleAuth} />} />
 
-            {/* Protected routes */}
-            <Route 
-              path="/dashboard/*" 
-              element={
-                <ProtectedRoute 
-                  element={<Dashboard />} 
-                  isAuthenticated={isLoggedIn}
-                />
-              }
-            >
-              <Route path="overview" element={<Overview />} />
-              <Route path="stats" element={<Stats />} />
-            </Route>
+              {/* Protected routes */}
+              <Route 
+                path="/dashboard" 
+                element={
+                  <ProtectedRoute isAuthenticated={isLoggedIn}>
+                    <Dashboard />
+                  </ProtectedRoute>
+                } 
+              />
 
-            {/* Other routes */}
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+              {/* Dropdown routes inside dashboard */}
+              <Route 
+                path="/dashboard/overview" 
+                element={
+                  <ProtectedRoute isAuthenticated={isLoggedIn}>
+                    <Overview />
+                  </ProtectedRoute>
+                } 
+              />
 
-            <Route 
-              path="/user/*" 
-              element={
-                <ProtectedRoute 
-                  element={<Users />} 
-                  isAuthenticated={isLoggedIn} 
-                />
-              }
-            />
+              <Route 
+                path="/dashboard/stats" 
+                element={
+                  <ProtectedRoute isAuthenticated={isLoggedIn}>
+                    <Stats />
+                  </ProtectedRoute>
+                } 
+              />
 
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </main>
+              {/* Other routes */}
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+
+              {/* Users route with details and profile */}
+              <Route 
+                path="/user" 
+                element={
+                  <ProtectedRoute isAuthenticated={isLoggedIn}>
+                    <Users />
+                  </ProtectedRoute>
+                } 
+              />
+
+              <Route 
+                path="/user/details/:id" 
+                element={
+                  <ProtectedRoute isAuthenticated={isLoggedIn}>
+                    <UserDetails />
+                  </ProtectedRoute>
+                } 
+              />
+
+              <Route 
+                path="/user/profile/:id" 
+                element={
+                  <ProtectedRoute isAuthenticated={isLoggedIn}>
+                    <UserProfile />
+                  </ProtectedRoute>
+                } 
+              />
+
+              {/* Page Not Found */}
+              <Route path="*" element={<PageNotFound />} />
+            </Routes>
+          </main>
+        </div>
       </div>
     </Router>
   );
