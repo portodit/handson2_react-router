@@ -1,0 +1,63 @@
+.user-detail-container {
+    background-color: #F2F2F2;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-detail-headline {
+    color: #CB1F31;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .user-detail-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .user-detail-row {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #E0E0E0;
+  }
+  
+  .user-detail-label {
+    flex: 1;
+    font-weight: bold;
+    color: #CB1F31;
+  }
+  
+  .user-detail-value {
+    flex: 3;
+    color: #333;
+  }
+  
+  .user-detail-navigation {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .navigation-button {
+    background-color: #CB1F31;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px;
+  }
+  
+  .navigation-button:hover {
+    background-color: #a51927;
+  }
+  
+  .navigation-button:disabled {
+    background-color: #E0E0E0;
+    cursor: not-allowed;
+  }
+  

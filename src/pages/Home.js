@@ -65,6 +65,7 @@ function Home() {
             description="Sesuaikan pengaturan platform sesuai dengan kebutuhan Anda." 
           />
         </div>
+        <p><strong>Disclaimer: </strong>Ini hanyalah contoh saja tidak menggambarkan fitur yang sebenarnya</p>
       </div>
     </div>
   );

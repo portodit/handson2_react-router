@@ -36,12 +36,18 @@ body, html, .App {
 
 .sidebar ul li {
   margin: 15px 0;
+  position: relative;
 }
 
 .sidebar ul li a {
   color: white;
   text-decoration: none;
-  display: block;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li a svg {
+  margin-right: 10px;
 }
 
 .sidebar .auth-button {
@@ -60,9 +66,39 @@ body, html, .App {
   background-color: #e6b700;
 }
 
+.dropdown-content {
+  display: none;
+  list-style: none;
+  background-color: #CB1F31;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 100%;
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  margin: 0;
+}
+
+.dropdown-content li a {
+  color: white;
+  padding: 10px 20px;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  background-color: #a51927;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 .content-wrapper {
-  margin-left: 240px; /* Adjust sesuai dengan ukuran sidebar */
-  width: calc(100% - 240px); /* Agar konten tidak tertutupi oleh sidebar */
+  margin-left: 240px; 
+  width: calc(100% - 240px);
   display: flex;
   flex-direction: column;
 }

@@ -1,29 +1,92 @@
-.login-container {
-    background-color: #FFFFFF;
-    padding: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    max-width: 400px;
-    margin: 100px auto;
-    text-align: center;
-  }
-  
-  h1 {
-    color: #CB1F31;
-    margin-bottom: 20px;
-  }
-  
-  .login-button {
-    background-color: #CB1F31;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  .login-button:hover {
-    background-color: #a51927;
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body, html, .App {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+.login-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #F2F2F2;
+}
+
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 60px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  max-width: 500px; 
+  margin-top: 20px;
+}
+
+.login-headline {
+  color: #CB1F31;
+  font-size: 32px; 
+  margin-bottom: 10px;
+  text-align: center; 
+}
+
+.login-description {
+  margin-bottom: 20px;
+  text-align: center; /* Center-align the description */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; 
+}
+
+.login-form input {
+  border: 1px solid #CACACA;
+  border-radius: 8px;
+  padding: 12px; 
+  margin-bottom: 10px;
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.login-form input:focus {
+  border-color: #CB1F31;
+}
+
+.login-form button {
+  background-color: #CB1F31;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%; /* Make button full width */
+  box-sizing: border-box;
+}
+
+.login-form button:hover {
+  background-color: #a51927;
+}
+
+.error-message {
+  color: #a51927;
+  margin-top: 10px;
+  text-align: center; 
+}
+
+.account-notification {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 500px; 
+  margin-top: 20px;
+  text-align: center;
+}
