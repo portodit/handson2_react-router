@@ -9,7 +9,7 @@ function About() {
         Halo! 👋 Selamat datang di halaman "Tentang Kami". Platform ini, yaitu <strong>Digistar CRM Dashboard 2024</strong>, dikembangkan sebagai proyek yang awalnya "iseng" 😄. Ide dasarnya adalah untuk melakukan modifikasi dari latihan hands-on React Router, sehingga saya bisa langsung terjun ke dalam pengembangan komponen serta mengimplementasikan navigasi antar halaman menggunakan React Router.
       </p>
       <p className="about-description">
-        Proyek ini memberi kesempatan untuk mengasah kemampuan pengembangan aplikasi menggunakan React, khususnya dalam membangun sistem dashboard yang dinamis dan mudah digunakan. Dengan memanfaatkan berbagai fitur seperti Protected Routes dan pengelolaan state, platform ini dirancang untuk membantu meningkatkan produktivitas melalui pengelolaan data CRM secara efisien 🚀.
+        Proyek ini memberi kesempatan untuk mengasah kemampuan dalam mengembangkan aplikasi React, khususnya dalam membangun sistem dashboard yang dinamis dan mudah digunakan. Dengan memanfaatkan berbagai fitur seperti Protected Routes dan pengelolaan state, platform ini dirancang untuk membantu meningkatkan produktivitas melalui pengelolaan data CRM secara efisien 🚀.
       </p>
 
       <h3 className="about-subheadline">Tentang Developer</h3>
