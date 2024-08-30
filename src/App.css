@@ -1,38 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body, html, .App {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; 
+}
 .App {
+  display: flex;
+}
+
+/* Styling untuk Sidebar */
+.sidebar {
+  background-color: #CB1F31;
+  color: white;
+  width: 200px;
+  height: 100vh;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar .logout-button {
+  background-color: #FFC533;
+  color: #1e1e1e;
+  border: 1px solid #1e1e1e;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+
+.main-content {
+  background-color: #FEFEFE;
+  padding: 20px;
+  width: calc(100% - 200px); 
+  min-height: 100vh;
+}
+
+.main-content .container {
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Styling untuk Login Page */
+.login-container {
+  background-color: #FFFFFF;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 100px auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.login-button {
+  background-color: #CB1F31;
   color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-button:hover {
+  background-color: #a51927;
 }

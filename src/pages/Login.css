@@ -1,0 +1,29 @@
+.login-container {
+    background-color: #FFFFFF;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 100px auto;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #CB1F31;
+    margin-bottom: 20px;
+  }
+  
+  .login-button {
+    background-color: #CB1F31;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .login-button:hover {
+    background-color: #a51927;
+  }
+  
